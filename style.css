@@ -1,0 +1,172 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* Page background color */
+    color: black; /* Text color */
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px; /* Reduced padding for a smaller header */
+    background-color: gold; /* Header background color */
+    border: 2px solid black; /* Black border */
+    border-radius: 45px; /* Rounded corners */
+    animation: fadeIn 0.5s; /* Animation for header appearance */
+}
+
+header img {
+    width: 200px; /* Logo width */
+    height: 200px; /* Logo height */
+}
+
+header a {
+    text-decoration: none;
+    color: black; /* Navigation link color */
+    font-weight: bold;
+    margin-left: 40px; /* Increased space between links */
+    transition: color 0.3s, transform 0.3s; /* Transition effect */
+}
+
+header a:first-child {
+    margin-left: 0; /* Remove margin from the first link */
+}
+
+header a:hover,
+header a:active {
+    color: darkorange; /* Color on hover */
+    transform: scale(1.1); /* Slight scale effect on hover */
+    animation: bounce 0.5s; /* Animation for hover effect */
+}
+
+.text {
+    text-align: center;
+    margin: 20px 0;
+    animation: fadeIn 1s; /* Animation for text appearance */
+}
+
+.text h1,
+.text h2 {
+    margin-bottom: 10px;
+}
+
+.bodyimage {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.bodyimage img {
+    width: 300px; /* Image width */
+    height: auto; /* Keep aspect ratio */
+    margin: 0 10px; /* Space between images */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s; /* Transition effect for image scaling */
+}
+
+.bodyimage img:hover {
+    transform: scale(1.05); /* Scale effect on hover for images */
+}
+
+.place {
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 70px;
+}
+
+.place iframe {
+    border: 2px solid gold; /* Map border color */
+    border-radius: 10px; /* Rounded corners for the map */
+}
+
+.social-icons {
+    text-align: center;
+    margin: 20px 0;
+    box-shadow:100px 100px 100px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    font-size: 24px; /* Icon size */
+    color: black; /* Icon color */
+    transition: color 0.3s, transform 0.3s; /* Transition effect */
+}
+
+.social-icons a:hover {
+    color: darkorange; /* Color on hover */
+    transform: scale(1.2); /* Scale effect on hover */
+    animation: spin 0.5s; /* Animation for spin effect on hover */
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header a {
+        margin: 10px 0; /* Space between links */
+    }
+
+    header img {
+        width: 150px; /* Adjust logo size for smaller screens */
+        height: 150px; /* Adjust logo height for smaller screens */
+    }
+
+    .bodyimage {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Grid layout for images */
+        gap: 10px; /* Space between grid items */
+        margin: 20px; /* Margin around the grid */
+    }
+
+    .bodyimage img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Keep aspect ratio */
+    }
+
+    .place iframe {
+        width: 100%; /* Full width for the map */
+        height: 200px; /* Fixed height for the map */
+    }
+}
