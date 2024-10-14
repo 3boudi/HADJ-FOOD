@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white; /* Page background color */
+    background-color: black; /* Page background color */
     color: black; /* Text color */
     line-height: 1.6;
 }
@@ -18,7 +18,7 @@ header {
     align-items: center;
     padding: 5px 20px; /* Reduced padding for a smaller header */
     background-color: gold; /* Header background color */
-    border: 2px solid black; /* Black border */
+    border: 2px solid white; /* Black border */
     border-radius: 45px; /* Rounded corners */
     animation: fadeIn 0.5s; /* Animation for header appearance */
 }
