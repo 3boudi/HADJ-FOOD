@@ -107,6 +107,17 @@ header a:active {
     transform: scale(1.2); /* Scale effect on hover */
     animation: spin 0.5s; /* Animation for spin effect on hover */
 }
+hr {
+    border: none; /* Remove the default border */
+    height: 2px; /* Set the height of the hr line */
+    background-color: rgb(242, 242, 242); /* Change the color to gold */
+    margin: 20px 0; /* Add space above and below the hr */
+}
+.below-hr {
+    background-color: gold; /* Sets the background color to gold */
+    padding: 20px; /* Optional: Adds some padding */
+}
+
 
 /* Keyframe animations */
 @keyframes fadeIn {
