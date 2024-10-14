@@ -50,12 +50,14 @@ header a:active {
 .text {
     text-align: center;
     margin: 20px 0;
-    animation: fadeIn 1s; /* Animation for text appearance */
+    animation: fadeIn 1s; 
+    color: white/* Animation for text appearance */
 }
 
 .text h1,
 .text h2 {
     margin-bottom: 10px;
+     color: white
 }
 
 .bodyimage {
@@ -96,7 +98,7 @@ header a:active {
 .social-icons a {
     margin: 0 15px;
     font-size: 24px; /* Icon size */
-    color: black; /* Icon color */
+    color: white; /* Icon color */
     transition: color 0.3s, transform 0.3s; /* Transition effect */
 }
 
