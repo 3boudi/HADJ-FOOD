@@ -1,0 +1,34 @@
+body{
+    background-color: black;
+}
+.social-icons {
+    text-align: center;
+    margin: 20px 0;
+    box-shadow:100px 100px 100px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    font-size: 104px; /* Icon size */
+    color: white; /* Icon color */
+    transition: color 0.3s, transform 0.3s; /* Transition effect */
+}
+.solo{
+    display: flex;
+    justify-content: center;
+    margin:50px;
+}
+.solo img{
+    width: 600px;
+    height: 600px;
+    transition: transform 0.5s;
+}.solo img:hover {
+    
+    transform: scale(1.2,1);
+}
+.social-icons{
+    text-align: center;
+    margin: 20px 0;
+    color: gold;
+}
+.social-icons a{}
