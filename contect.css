@@ -1,34 +1,88 @@
-body{
-    background-color: black;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* Body and Background */
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Centered Logo */
+.solo {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.solo img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.4s ease-in-out;
+    border-radius: 10px;
+}
+
+.solo img:hover {
+    transform: scale(1.1);
+}
+
+/* Social Icons and Contact Info */
 .social-icons {
     text-align: center;
     margin: 20px 0;
-    box-shadow:100px 100px 100px;
+    color: gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .social-icons a {
-    margin: 0 15px;
-    font-size: 104px; /* Icon size */
-    color: white; /* Icon color */
-    transition: color 0.3s, transform 0.3s; /* Transition effect */
+    font-size: 36px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
-.solo{
-    display: flex;
-    justify-content: center;
-    margin:50px;
+
+.social-icons a:hover {
+    color: gold;
+    transform: scale(1.1);
 }
-.solo img{
-    width: 600px;
-    height: 600px;
-    transition: transform 0.5s;
-}.solo img:hover {
-    
-    transform: scale(1.2,1);
+
+/* Contact Number */
+.contact-number {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: color 0.3s ease;
 }
-.social-icons{
-    text-align: center;
-    margin: 20px 0;
+
+.contact-number:hover {
     color: gold;
 }
-.social-icons a{}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .social-icons a {
+        font-size: 48px;
+    }
+
+    .contact-number {
+        font-size: 24px;
+    }
+
+    .solo img {
+        max-width: 400px;
+    }
+}
