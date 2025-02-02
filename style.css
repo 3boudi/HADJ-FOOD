@@ -15,23 +15,15 @@ body {
     color: black;
     line-height: 1.6;
 }
-
-
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    /* Reduced padding for a smaller header */
     background-color: gold;
-    /* Header background color */
     border: 8px solid white;
-    /* Black border */
     border-radius: 45px;
-    /* Rounded corners */
     animation: fadeIn 0.5s;
-    /* Animation for header appearance */
     margin: 5;
 
 }
@@ -54,12 +46,9 @@ header img {
 header a {
     text-decoration: none;
     color: black;
-    /* Navigation link color */
     font-weight: bold;
     margin-left: 40px;
-    /* Increased space between links */
     transition: color 0.3s, transform 0.3s;
-    /* Transition effect */
 }
 
 header a:first-child {
@@ -102,6 +91,7 @@ header a:active {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    filter: 0px 0px 20px gold;
 }
 
 .bodyimage img {
@@ -114,12 +104,12 @@ header a:active {
     border-radius: 10px;
     /* Rounded corners for images */
     transition: transform 0.3s;
+    filter:drop-shadow(0px 0px 10px gold);
     /* Transition effect for image scaling */
 }
 
 .bodyimage img:hover {
-    transform: scale(1.05);
-    /* Scale effect on hover for images */
+    transform: scale(1.1); /* Scale up the image by 10% */
 }
 
 .place {
@@ -239,7 +229,6 @@ hr {
         transform: translateY(0);
     }
 }
-
 @keyframes bounce {
 
     0%,
@@ -269,31 +258,26 @@ hr {
         align-items: flex-start;
 
     }
-
     header a {
         margin: 10px 0;
         /* Space between links */
     }
-
     header img {
         width: 150px;
         /* Adjust logo size for smaller screens */
         height: 150px;
         /* Adjust logo height for smaller screens */
     }
-
     .bodyimage {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 10px;
         margin: 20px;
     }
-
     .bodyimage img {
         width: 100%;
         height: auto;
     }
-
     .place iframe {
         width: 100%;
         height: 400px;
