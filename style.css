@@ -1,5 +1,4 @@
 /* Reset some basic styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +7,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('background.jpg'); /* Corrected: use background-image */
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: black;
     line-height: 1.6;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -25,7 +25,6 @@ header {
     border-radius: 45px;
     animation: fadeIn 0.5s;
     margin: 5;
-
 }
 
 .s {
@@ -33,14 +32,11 @@ header {
     margin-left: 50px;
     font-size: 150%;
     text-shadow: 10px 10px 10px;
-
 }
 
 header img {
     width: 200px;
-    /* Logo width */
     height: 200px;
-    /* Logo height */
 }
 
 header a {
@@ -53,25 +49,20 @@ header a {
 
 header a:first-child {
     margin-left: 0;
-    /* Remove margin from the first link */
 }
 
 header a:hover,
 header a:active {
     color: darkorange;
-    /* Color on hover */
     transform: scale(1.1);
-    /* Slight scale effect on hover */
     animation: bounce 0.5s;
-    /* Animation for hover effect */
 }
 
 .text {
     text-align: center;
     margin: 20px 0;
     animation: fadeIn 1s;
-    color: white
-        /* Animation for text appearance */
+    color: white;
 }
 
 .text h1,
@@ -84,32 +75,26 @@ header a:active {
     font-weight: 900;
     font-style: normal;
     font-variation-settings: "wdth" 1000;
-
 }
 
 .bodyimage {
     display: flex;
     justify-content: center;
     margin: 20px 0;
-    filter: 0px 0px 20px gold;
+    filter: drop-shadow(0px 0px 20px gold);
 }
 
 .bodyimage img {
     width: 300px;
-    /* Image width */
     height: auto;
-    /* Keep aspect ratio */
     margin: 0 10px;
-    /* Space between images */
     border-radius: 10px;
-    /* Rounded corners for images */
     transition: transform 0.3s;
-    filter:drop-shadow(0px 0px 10px gold);
-    /* Transition effect for image scaling */
+    filter: drop-shadow(0px 0px 10px gold);
 }
 
 .bodyimage img:hover {
-    transform: scale(1.1); /* Scale up the image by 10% */
+    transform: scale(1.1);
 }
 
 .place {
@@ -120,9 +105,7 @@ header a:active {
 
 .place iframe {
     border: 2px solid gold;
-    /* Map border color */
     border-radius: 10px;
-    /* Rounded corners for the map */
 }
 
 .social-icons {
@@ -134,88 +117,81 @@ header a:active {
 .social-icons a {
     margin: 0 15px;
     font-size: 24px;
-    /* Icon size */
     color: white;
-    /* Icon color */
     transition: color 0.3s, transform 0.3s;
-    /* Transition effect */
 }
 
 .social-icons a:hover {
     color: darkorange;
-    /* Color on hover */
     transform: scale(1.2);
-    /* Scale effect on hover */
     animation: spin 0.5s;
-    /* Animation for spin effect on hover */
 }
 
 hr {
     border: none;
-    /* Remove the default border */
     height: 2px;
-    /* Set the height of the hr line */
     background-color: rgb(242, 242, 242);
-    /* Change the color to gold */
     margin: 20px 0;
-    /* Add space above and below the hr */
 }
 
 .below-hr {
     background-color: gold;
-    /* Sets the background color to gold */
     padding: 20px;
-    /* Optional: Adds some padding */
-}
-.text1 {
-    padding: 20px;
-    font-size: 20px;
-    text-align: center;
-    margin: 0px 20px;
-    animation: fadeIn 1s;
-    color: rgb(255, 255, 255);
-    font-family: Arial, sans-serif;
-    position: relative; /* Enable positioning */
 }
 
-/* Modify .report to include a button and align to the right */
-.report {
-
-    background-color: gold;
-    display: grid;
-    margin: 20px 0;
-    border: 2px solid gold;
-    cursor: pointer;
-    box-shadow: 5px 5px 5px 5px rgb(255, 255, 255), 4px 4px 0 0 gold;
-    
-    
-}
-
-/* Align button to the right inside .amin */
-.amin {
-    margin: 0 auto; /* Center the container horizontally */
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
-    justify-content:center; /* Align content to the right */
+    justify-content: center;
     align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Add styles for button */
-.amin button {
-    background-color: gold;
+.popup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content {
+    background: rgba(255, 240, 240, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.popup.active .popup-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    background-color: #ff4d4d;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius:  20%;
-    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
-.amin button:hover {
-    background-color: red; /* Darker orange */
-    transform: scale(1.1);
+.close-btn:hover {
+    background-color: #ff1a1a;
 }
-
 
 /* Keyframe animations */
 @keyframes fadeIn {
@@ -223,19 +199,16 @@ hr {
         opacity: 0;
         transform: translateY(-10px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-@keyframes bounce {
 
-    0%,
-    100% {
+@keyframes bounce {
+    0%, 100% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.1);
     }
@@ -245,7 +218,6 @@ hr {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
@@ -256,17 +228,13 @@ hr {
     header {
         flex-direction: column;
         align-items: flex-start;
-
     }
     header a {
         margin: 10px 0;
-        /* Space between links */
     }
     header img {
         width: 150px;
-        /* Adjust logo size for smaller screens */
         height: 150px;
-        /* Adjust logo height for smaller screens */
     }
     .bodyimage {
         display: grid;
