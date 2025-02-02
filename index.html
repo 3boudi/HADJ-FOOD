@@ -32,7 +32,6 @@
             "servesCuisine": "أكلات شرقية",
             "url": "https://3boudi.github.io/HADJ-FOOD/"
         }
-        
     </script>
 </head>
 
@@ -42,10 +41,24 @@
         <nav class="navigator">
             <a href="index.html" class="s">Home</a>
             <a href="menu.html" class="s">Menu</a>
-            <a href="contect.html" class="s">Contact</a>
+            <a href="#popup" class="s" id="contactButton">Contact</a> <!-- Updated to trigger popup -->
         </nav>
-
     </header>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Contact Us</h2>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/hadj_food" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/hadj_food" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@hadj_food" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <br>
+                <a href="tel:+213662169314">(+213) 6-62-16-93-14</a>
+            </div>
+            <button id="closeButton" class="close-btn">Close</button>
+        </div>
+    </div>
 
     <section class="intro">
         <div class="text">
