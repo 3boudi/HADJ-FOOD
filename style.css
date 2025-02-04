@@ -160,9 +160,11 @@ hr {
     visibility: visible;
     opacity: 1;
 }
-
+h2{
+    color: white;
+}
 .popup-content {
-    background: rgba(255, 240, 240, 0.9);
+    background: rgb(35, 30, 30);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -178,7 +180,7 @@ hr {
 }
 
 .close-btn {
-    background-color: #ff4d4d;
+    background-color: gold;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -279,4 +281,6 @@ hr {
         margin-left: 50px;
     
     }
+   
+  
 }
